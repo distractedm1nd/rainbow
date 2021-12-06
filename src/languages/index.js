@@ -1,3 +1,4 @@
+import lang from 'i18n-js';
 import english from './_english.json';
 import french from './_french.json';
 
@@ -9,4 +10,8 @@ export const resources = {
 export const supportedLanguages = {
   en: 'English',
   fr: 'French',
+};
+
+export const updateLanguageLocale = code => {
+  lang.locale = code;
 };
