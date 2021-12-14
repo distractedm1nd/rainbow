@@ -15,3 +15,14 @@ export const supportedLanguages = {
 export const updateLanguageLocale = code => {
   lang.locale = code;
 };
+
+// Configure languages
+lang.defaultLocale = 'en';
+lang.locale = 'en';
+lang.fallbacks = true;
+lang.translations = Object.assign(
+  {},
+  ...Object.keys(resources).map(key => ({
+    [key]: resources[key].translation,
+  }))
+);
